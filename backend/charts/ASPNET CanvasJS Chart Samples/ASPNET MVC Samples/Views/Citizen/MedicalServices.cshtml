@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Medical Services";
+}
+
+<div id="chartContainer"></div>
+
+<script type="text/javascript">
+    $(function () {
+
+        var dataPoints = @Html.Raw(ViewBag.DataPointsRequiredServices);
+        debugger;
+        var chart = new CanvasJS.Chart("chartContainer", {
+            title: {
+                text: "Citizens required services"
+            },
+            data: [
+            {
+                type: "column",
+                dataPoints: dataPoints,
+
+                //You can add dynamic data from the controller as shown below. Check the controller and uncomment the line which generates dataPoints.
+                //dataPoints: @Html.Raw(ViewBag.DataPoints),
+            }
+            ]
+        });
+        chart.render();
+    });
+</script>

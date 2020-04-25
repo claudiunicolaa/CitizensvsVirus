@@ -16,6 +16,7 @@ module.exports.create = async event  => {
   const resp = new QuestionnaireResponse({
     state: data.state,
     area: data.area,
+    createdAt: new Date().getTime(),
   });
 
   try {

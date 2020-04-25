@@ -13,8 +13,7 @@
     "serverless-offline": "^6.1.4"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "mongoose": "^5.9.10",
-    "validator": "^13.0.0"
+    "airtable": "^0.8.1",
+    "dotenv": "^8.2.0"
   }
 }

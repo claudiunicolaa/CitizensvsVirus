@@ -1,34 +1,30 @@
-'use strict';
+"use strict";
 
-require('dotenv').config({ path: './.env' });
-const mongoose = require('mongoose');
-const QuestionnaireResponse = require('./model/QuestionnaireResponse');
+require("dotenv").config({ path: "./.env" });
+const Airtable = require("airtable");
+const base = new Airtable({ apiKey: process.env.airtableApiKey }).base(
+  process.env.airtableId
+);
+const tableName = "responses";
 
-const mongoString = process.env.mongoString; 
-
-function connect() {
-  return mongoose.connect(mongoString, { useNewUrlParser: true, useUnifiedTopology: true })
-}
-
-module.exports.create = async event  => {
+module.exports.create = async (event) => {
   const data = JSON.parse(event.body);
 
-  const resp = new QuestionnaireResponse({
+  const response = {
     state: data.state,
     area: data.area,
     createdAt: new Date().getTime(),
-  });
+  };
 
   try {
-    const db = await connect();
-    const result = await resp.save();
+    await base(tableName).create(response);
     return {
       statusCode: 201,
     };
   } catch (err) {
     return {
-      statusCode: 500,
-      body: JSON.stringify(err)
+      statusCode: err.statusCode,
+      body: JSON.stringify(err),
     };
   }
 };

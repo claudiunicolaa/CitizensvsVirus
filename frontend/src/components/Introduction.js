@@ -45,7 +45,7 @@ export default function Introduction() {
           <img className={classes.logo} alt="Logo of the European Commission"
                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/European_Commission.svg/1280px-European_Commission.svg.png" />
           <Typography variant="h6" color="inherit" noWrap>
-            EU Citizens VS Virus
+            EU Citizens vs Virus
           </Typography>
         </Toolbar>
       </AppBar>

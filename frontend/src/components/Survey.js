@@ -144,7 +144,7 @@ export default function Survey() {
       <AppBar color="default" className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
-            Citizens VS Virus
+            EU Citizens vs Virus
           </Typography>
         </Toolbar>
       </AppBar>

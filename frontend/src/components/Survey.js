@@ -97,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const steps = ['Medical Services', 'Medication & Equipment', 'Trust', 'Demographics', 'Information'];
+const steps = ['Medical Services Access', 'Medication & Equipment Access', 'Trust', 'Demographics', 'Information'];
 
 function getStepContent(step) {
   switch (step) {

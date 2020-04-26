@@ -68,8 +68,8 @@ export default function Introduction() {
                   </Switch>
                 </Grid>
                 <Grid item>
-                  <Button variant="outlined" color="primary">
-                    See statistics
+                  <Button variant="outlined" color="primary" disabled>
+                    See statistics (soon)
                   </Button>
                 </Grid>
               </Grid>

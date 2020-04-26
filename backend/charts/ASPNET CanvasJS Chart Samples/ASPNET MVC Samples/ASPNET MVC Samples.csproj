@@ -179,6 +179,7 @@
       <DependentUpon>DataBaseModel.edmx</DependentUpon>
     </Content>
     <Content Include="CSVs\listofeucountries_csv.csv" />
+    <Content Include="CSVs\responses-Grid view.csv" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Models\DataBaseModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -246,6 +247,7 @@
     <Compile Include="Models\ViewModels\MedicalServicesByCountry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CitizenServices.cs" />
+    <Compile Include="Services\TestTable.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -299,6 +301,9 @@
     <Content Include="Views\Citizen\MedicalEmergency.cshtml" />
     <Content Include="Views\Citizen\FamilyDoctor.cshtml" />
     <Content Include="Views\Citizen\SpecialisedMedicalCare.cshtml" />
+    <Content Include="Views\Shared\_PreviousLayout.cshtml" />
+    <Content Include="Views\Citizen\Accessme.cshtml" />
+    <Content Include="Views\Citizen\FinancialPerspective.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

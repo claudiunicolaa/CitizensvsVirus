@@ -64,6 +64,38 @@ namespace ASPNET_MVC_Samples.Controllers
             return View(model);
         }
 
+        public ActionResult AccessME(string country)
+        {
+            var countries = Mocks.MockCountries.Get();
+            var model = new CountryViewModel();
+            model.Countries = GetSelectListItems(countries);
+
+            if (country == null)
+            {
+                return View(model);
+            }
+
+            ViewBag.DataPoints = JsonConvert.SerializeObject(CitizenServices.GetMedicalServicesByCountry(country).AccessEmergencyMedicalCare);
+
+            return View(model);
+        }
+
+        public ActionResult FinancialPerspective(string country)
+        {
+            var countries = Mocks.MockCountries.Get();
+            var model = new CountryViewModel();
+            model.Countries = GetSelectListItems(countries);
+
+            if (country == null)
+            {
+                return View(model);
+            }
+
+            ViewBag.DataPoints = JsonConvert.SerializeObject(CitizenServices.GetMedicalServicesByCountry(country).FinancialPerspectiveAccess);
+
+            return View(model);
+        }
+
         private IEnumerable<SelectListItem> GetSelectListItems(IEnumerable<string> elements)
         {
             // Create an empty list to hold result of the operation

@@ -14,6 +14,10 @@ namespace ASPNET_MVC_Samples.Models.Basic
         public AccessLevel SpecialisedMedicatCare { get; set; }
 
         public bool RequiredEmergency { get; set; }
+
+        public AccessLevel EmergencyMedicatCare { get; set; }
+
+        public CostLevel FinancialPerspective { get; set; }
     }
 
     public enum AccessLevel
@@ -23,5 +27,15 @@ namespace ASPNET_MVC_Samples.Models.Basic
         Fair,
         Bad,
         VeryBad
+    }
+
+    public enum CostLevel
+    {
+        NoAccess,
+        LimitedAccess,
+        HighCost,
+        FairCost,
+        LowCost,
+        NoCost
     }
 }

@@ -89,123 +89,75 @@
     <!-- sidebar -->
     <div id="sidebar" class="sidebar-toggle">
         <ul class="nav nav-sidebar">
-            <li>
-                <a href="/">
-                    <i class="fa fa-home" aria-hidden="true"></i>
-                    <span>HOME</span>
-                </a>
-            </li>
-            <li role="separator" class="divider"></li>
-
-            <!-- chart types -->
-            <li data-toggle="collapse" href="#charttypes" aria-expanded="true" aria-controls="chart-types">
-                <a href="#">
-                    <i class="fa fa-area-chart" aria-hidden="true" style="width: 13px;"></i>
-                    <span>CHART TYPES</span>
-                </a>
-            </li>
-
-            <li>
-                <ul id="charttypes" class="sub-menu collapse @if(Request.Url.AbsoluteUri.ToString().Contains("charttypes/")) { @Html.Raw("in") }">
-                    <li><a href="/charttypes/column/">Column Chart</a></li>
-                    <li><a href="/charttypes/line/">Line Chart</a></li>
-                    <li><a href="/charttypes/stepline/">Step Line Chart</a></li>
-                    <li><a href="/charttypes/spline/">Spline Chart</a></li>
-                    <li><a href="/charttypes/steparea/">Step Area Chart</a></li>
-                    <li><a href="/charttypes/area/">Area Chart</a></li>
-                    <li><a href="/charttypes/splinearea/">Spline Area Chart</a></li>
-                    <li><a href="/charttypes/bar/">Bar Chart</a></li>
-                    <li><a href="/charttypes/pie/">Pie Chart</a></li>
-                    <li><a href="/charttypes/doughnut/">Doughnut Chart</a></li>
-                    <li><a href="/charttypes/bubble/">Bubble Chart</a></li>
-                    <li><a href="/charttypes/scatter/">Scatter Chart</a></li>
-                    <li><a href="/charttypes/stackedcolumn/">Stacked Column Chart</a></li>
-                    <li><a href="/charttypes/stackedcolumn100/">Stacked Column 100% Chart</a></li>
-                    <li><a href="/charttypes/stackedarea/">Stacked Area Chart</a></li>
-                    <li><a href="/charttypes/stackedarea100/">Stacked Area 100% Chart</a></li>
-                    <li><a href="/charttypes/stackedbar/">Stacked Bar Chart</a></li>
-                    <li><a href="/charttypes/stackedbar100/">Stacked Bar 100% Chart</a></li>
-                    @*<li><a href="#">Range Column Chart</a></li>
-                <li><a href="#">Range Bar Chart</a></li>
-                <li><a href="#">Range Area Chart</a></li>
-                <li><a href="#">Range Spline Area Chart</a></li>
-                <li><a href="#">OHLC Chart</a></li>
-                <li><a href="#">Candlestick Chart</a></li>*@
-                </ul>
-            </li>
-            <!-- /chart types -->
-
-            <li role="separator" class="divider"></li>
-
-            <!--  features -->
-            <li data-toggle="collapse" href="#features" aria-expanded="false" aria-controls="features">
-                <a href="#">
-                    <i class="fa fa-flask" aria-hidden="true"></i>
-                    <span>FEATURES</span>
-                </a>
-            </li>
-
-            <li>
-                <ul id="features" class="sub-menu collapse @if(Request.Url.AbsoluteUri.ToString().Contains("features/")) { @Html.Raw("in") }">
-                    <li><a href="/features/zoomingpanning/">Zooming &amp; Panning</a></li>
-                    <li><a href="/features/exportchart/">Export Chart as Image</a></li>
-                    <li><a href="/features/eventhandling/">Events</a></li>
-                    <li><a href="/features/logaxis/">Logarithmic Axis</a></li>
-                    <li><a href="/features/reverseaxis/">Reverse Axis</a></li>
-                    <li><a href="/features/datetime/">Date Time Axis</a></li>
-                    <li><a href="/features/striplines/">StripLines</a></li>
-                    <li><a href="/features/multipleyaxis/">Multiple Y Axis</a></li>
-                    <li><a href="/features/multiserieschart/">Multiseries Charts</a></li>
-                </ul>
-            </li>
-            <!--  /features -->
-
-            <li role="separator" class="divider"></li>
-
-            <!--  how to  -->
-            <li data-toggle="collapse" href="#howto" aria-expanded="false" aria-controls="how-to">
-                <a href="#">
-                    <i class="fa fa-wrench" aria-hidden="true"></i>
-                    <span>HOW TO</span>
-                </a>
-            </li>
-
-            <li>
-                <ul id="howto" class="sub-menu collapse @if(Request.Url.AbsoluteUri.ToString().Contains("howto/")) { @Html.Raw("in") }">
-                    <li><a href="/howto/enabledisableds/">Hide / Show DataSeries</a></li>
-                    <li><a href="/howto/livechart/">Dynamic / Live Chart</a></li>
-                    <li><a href="/howto/syncmultiplecharts/">Sync Mulitple Charts</a></li>
-                    <li><a href="/howto/adddatapointsfromuserinput/">Add Data Points From User Input</a></li>
-                    <li><a href="/howto/multiplechartsinapage/">Multiple Charts in a Page</a></li>
-                    <li><a href="/howto/playstoplivechart/">Play / Stop Live Chart</a></li>
-                    <li><a href="/howto/createchartfromjson/">Charts using JSON &amp; AJAX</a></li>
-                    <li><a href="/howto/createchartfromxml/">Charts using XML &amp; AJAX</a></li>
-                    <li><a href="/howto/createchartfromcsv/">Charts using CSV &amp; AJAX</a></li>
-                    <li><a href="/howto/datafromdatabase">Render Data From Database</a></li>
-                </ul>
-            </li>
-            <!--  /how to  -->
-
-            <li role="separator" class="divider"></li>
-
-            <!--  citizen  -->
+            <!--  Access To Medical Services  -->
             <li data-toggle="collapse" href="#citizen" aria-expanded="false" aria-controls="citizen">
                 <a href="#">
                     <i class="fa fa-wrench" aria-hidden="true"></i>
-                    <span>CITIZEN</span>
+                    <span>Access To Medical Services</span>
                 </a>
             </li>
 
             <li>
                 <ul id="citizen" class="sub-menu collapse @if(Request.Url.AbsoluteUri.ToString().Contains("citizen/")) { @Html.Raw("in") }">
-                    <li><a href="/citizen/country/">Countries Pie Chart</a></li>
-                    <li><a href="/citizen/medicalservices/">Required Medical Services</a></li>
-                    <li><a href="/citizen/medicalemergency/">Required Medical Emergency</a></li>
-                    <li><a href="/citizen/familydoctor/">Family Doctor</a></li>
-                    <li><a href="/citizen/specialisedmedicalcare/">Specialised medical care</a></li>
+                    <li><a href="/citizen/medicalservices/">Required access to medical care</a></li>
+                    <li><a href="/citizen/familydoctor/">Access to family doctor (GP)</a></li>
+                    <li><a href="/citizen/specialisedmedicalcare/">Access to specialised medical care</a></li>
+                    <li><a href="/citizen/medicalemergency/">Required emergency medical care</a></li>
+                    <li><a href="/citizen/accessme/">Access to emergency medical care</a></li>
+                    <li><a href="/citizen/financialperspective/">Financial perspective of access to medical care</a></li>
                 </ul>
             </li>
-            <!--  /citizen  -->
+            <!--  /Access To Medical Services  -->
+
+            <li role="separator" class="divider"></li>
+
+            <!--  Access To Medication & Equipment  -->
+            <li data-toggle="collapse" href="#medequip" aria-expanded="false" aria-controls="citizen">
+                <a href="#">
+                    <i class="fa fa-wrench" aria-hidden="true"></i>
+                    <span>Access To Medication & Equipment</span>
+                </a>
+            </li>
+
+            <li>
+                <ul id="medequip" class="sub-menu collapse @if(Request.Url.AbsoluteUri.ToString().Contains("citizen/")) { @Html.Raw("in") }">
+                    <li><a href="/citizen/country/">Countries Pie Chart</a></li>
+                </ul>
+            </li>
+            <!--  /Access To Medication & Equipment  -->
+
+            <li role="separator" class="divider"></li>
+
+            <!--  Trust levels  -->
+            <li data-toggle="collapse" href="#trust" aria-expanded="false" aria-controls="citizen">
+                <a href="#">
+                    <i class="fa fa-wrench" aria-hidden="true"></i>
+                    <span>Trust levels</span>
+                </a>
+            </li>
+
+            <li>
+                <ul id="trust" class="sub-menu collapse @if(Request.Url.AbsoluteUri.ToString().Contains("citizen/")) { @Html.Raw("in") }">
+                    <li><a href="/citizen/country/">Countries Pie Chart</a></li>
+                </ul>
+            </li>
+            <!--  /Trust levels  -->
+
+            <li role="separator" class="divider"></li>
+            <!--  Demographics  -->
+            <li data-toggle="collapse" href="#demographics" aria-expanded="false" aria-controls="citizen">
+                <a href="#">
+                    <i class="fa fa-wrench" aria-hidden="true"></i>
+                    <span>Demographics</span>
+                </a>
+            </li>
+
+            <li>
+                <ul id="demographics" class="sub-menu collapse @if(Request.Url.AbsoluteUri.ToString().Contains("citizen/")) { @Html.Raw("in") }">
+                    <li><a href="/citizen/country/">Countries Pie Chart</a></li>
+                </ul>
+            </li>
+            <!--  /Demographics  -->
 
             <li role="separator" class="divider"></li>
         </ul>

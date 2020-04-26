@@ -17,8 +17,9 @@ namespace ASPNET_MVC_Samples.Mocks
             }
 
             countries = new List<string>();
+            String path = HttpContext.Current.Server.MapPath("~//CSVs//listofeucountries_csv.csv");
 
-            using (var reader = new StreamReader(@"D:\Projects\Hackathon\ASPNET CanvasJS Chart Samples\ASPNET MVC Samples\CSVs\listofeucountries_csv.csv"))
+            using (var reader = new StreamReader(path))
             {
                 while (!reader.EndOfStream)
                 {

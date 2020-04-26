@@ -3,11 +3,11 @@
 @using ASPNET_MVC_Samples.Models.ViewModels
 
 @{
-    ViewBag.Title = "Specialised Medical Care";
+    ViewBag.Title = "Access to Medical Care - Financial Perspective";
 }
 
 <div>
-    @using (Html.BeginForm("SpecialisedMedicalCare", "Citizen", FormMethod.Get))
+    @using (Html.BeginForm("FinancialPerspective", "Citizen", FormMethod.Get))
     {
         <label name="@Model.Country" id="@Model.Country">Please select a country:</label>
         @Html.DropDownListFor(m => m.Country, Model.Countries)
@@ -20,11 +20,11 @@
 <script type="text/javascript">
      $(function () {
 
-        var dataPoints = @Html.Raw(ViewBag.DataPointsSpecialisedMedicalCare);
+        var dataPoints = @Html.Raw(ViewBag.DataPoints);
         debugger;
         var chart = new CanvasJS.Chart("chartContainer", {
             title: {
-                text: "Since January, my and my immediate family’s access to specialised medical care has been:"
+                text: "From a financial perspective, how would you rate your access to medical care:"
             },
             animationEnabled: true,
             legend: {

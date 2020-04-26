@@ -37,12 +37,21 @@ namespace ASPNET_MVC_Samples.Mocks
                     medicalServicesForOne.FamilyDoctor = GetAccessLevel();
                     medicalServicesForOne.SpecialisedMedicatCare = GetAccessLevel();
                     medicalServicesForOne.RequiredEmergency = GetBool();
+                    medicalServicesForOne.EmergencyMedicatCare = GetAccessLevel();
+                    medicalServicesForOne.FinancialPerspective = GetCostLevel();
                 }
 
                 medicalServices.Add(medicalServicesForOne);
             }
 
             return medicalServices;
+        }
+
+        private CostLevel GetCostLevel()
+        {
+            int randInt = rnd.Next(0, 5);
+
+            return (CostLevel)randInt;
         }
 
         private AccessLevel GetAccessLevel()

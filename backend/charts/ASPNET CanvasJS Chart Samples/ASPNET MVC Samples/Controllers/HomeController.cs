@@ -1,4 +1,5 @@
 ﻿using ASPNET_MVC_Samples.Models;
+using ASPNET_MVC_Samples.Services;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -13,11 +14,12 @@ namespace ASPNET_MVC_Samples.Controllers
         // GET: Home
         public ActionResult Index()
         {
-			
-			// Below code can be used to include dynamic data in Chart. Check view page and uncomment the line "dataPoints: @Html.Raw(ViewBag.DataPoints)"
-			//ViewBag.DataPoints = JsonConvert.SerializeObject(DataService.GetRandomDataForNumericAxis(20));
 
-			return View();
+            // Below code can be used to include dynamic data in Chart. Check view page and uncomment the line "dataPoints: @Html.Raw(ViewBag.DataPoints)"
+            //ViewBag.DataPoints = JsonConvert.SerializeObject(DataService.GetRandomDataForNumericAxis(20));
+            ViewBag.DataPoints = JsonConvert.SerializeObject(CitizenServices.GetCitizensByCountryDataPoints());
+
+            return View("../Citizen/Country");
         }
     }
 }

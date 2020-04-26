@@ -10,5 +10,7 @@ namespace ASPNET_MVC_Samples.Models.ViewModels
     {
         public List<BasicDataPoint> FamilyDoctor { get; set; }
         public List<BasicDataPoint> SpecialisedMedicalCare { get; set; }
+        public List<BasicDataPoint> AccessEmergencyMedicalCare { get; internal set; }
+        public List<BasicDataPoint> FinancialPerspectiveAccess { get; internal set; }
     }
 }

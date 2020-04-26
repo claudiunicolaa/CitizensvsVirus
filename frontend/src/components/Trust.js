@@ -8,6 +8,8 @@ import FormControl from '@material-ui/core/FormControl';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import Typography from '@material-ui/core/Typography';
+import Checkbox from '@material-ui/core/Checkbox';
+import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -16,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
   selectEmpty: {
     marginTop: theme.spacing(2),
   },
+  textField: {
+    marginBottom: '30px'
+  }
 }));
 
 export default function Trust() {
@@ -76,6 +81,40 @@ export default function Trust() {
             </Select>
           </FormControl>
         </Grid>
+      </Grid>
+      <Grid item xs={12}>
+        <Typography variant="h6" gutterBottom>
+          Which of the following have been your sources for information about the state of the world and the COVID-19 crisis? (Please check all that apply)
+        </Typography>
+        <FormControlLabel
+          control={<Checkbox color="secondary" name="choice1" value="choice1" />}
+          label="Official websites"
+        />
+        <FormControlLabel
+          control={<Checkbox color="secondary" name="choice1" value="choice1" />}
+          label="Television networks"
+        />
+        <FormControlLabel
+          control={<Checkbox color="secondary" name="choice1" value="choice1" />}
+          label="Other people"
+        />
+        <FormControlLabel
+          control={<Checkbox color="secondary" name="choice1" value="choice1" />}
+          label="Social media"
+        />
+        <FormControlLabel
+          control={<Checkbox color="secondary" name="choice1" value="choice1" />}
+          label="Newspapers"
+        />
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <TextField
+          className={classes.textField}
+          id="other_source"
+          name="other_source"
+          label="Other"
+          fullWidth
+        />
       </Grid>
       <Grid item xs={12}>
         <Typography variant="h6" gutterBottom>

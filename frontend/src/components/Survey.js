@@ -195,11 +195,10 @@ export default function Survey() {
                 {activeStep === steps.length ? (
                   <React.Fragment>
                     <Typography variant="h5" gutterBottom>
-                      Thank you for your order.
+                      Thank you!
                     </Typography>
                     <Typography variant="subtitle1">
-                      Your order number is #2001539. We have emailed your order confirmation, and will
-                      send you an update when your order has shipped.
+                      If you checked “Other” to the information request question, your request is sent to the authorities together with the report, every other week.
                     </Typography>
                   </React.Fragment>
                 ) : (

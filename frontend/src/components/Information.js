@@ -5,6 +5,7 @@ import FormControl from "@material-ui/core/FormControl";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import Typography from "@material-ui/core/Typography";
+import TextField from "@material-ui/core/TextField";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -65,6 +66,15 @@ export default function Information() {
               <MenuItem value={9}>What is myth and what is fact?</MenuItem>
               <MenuItem value={10}>Other, please specify:....</MenuItem>
             </Select>
+            {
+              selectFirstValue === 10 &&
+              <TextField
+                required
+                id="outlined-required"
+                defaultValue=""
+                variant="outlined"
+              />
+            }
           </FormControl>
         </Grid>
       </Grid>

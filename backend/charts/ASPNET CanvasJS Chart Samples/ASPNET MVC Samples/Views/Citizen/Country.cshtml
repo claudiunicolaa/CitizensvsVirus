@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Pie Chart";
+}
+
+<div id="chartContainer"></div>
+
+<script type="text/javascript">
+    $(function () {
+        
+        var dataPoints = @Html.Raw(ViewBag.DataPoints);
+        debugger;
+        var chart = new CanvasJS.Chart("chartContainer", {
+            title: {
+                text: "Citizens by country"
+            },
+            animationEnabled: true,
+            legend: {
+                verticalAlign: "center",
+                horizontalAlign: "left",
+                fontSize: 20,
+                fontFamily: "Helvetica"
+            },
+            theme: "light2",
+            data: [
+            {
+                type: "pie",
+                indexLabelFontFamily: "Garamond",
+                indexLabelFontSize: 20,
+                indexLabel: "{label} {y}%",
+                startAngle: -20,
+                showInLegend: true,
+                toolTipContent: "{legendText} {y}%",
+                dataPoints: dataPoints,
+
+                //You can add dynamic data from the controller as shown below. Check the controller and uncomment the line which generates dataPoints.
+                //dataPoints: @Html.Raw(ViewBag.DataPoints),
+            }
+            ]
+        });
+        chart.render();
+    });
+</script>

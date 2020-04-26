@@ -7,11 +7,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import {
-  BrowserRouter as Router,
-  Link, Route, Switch
-} from 'react-router-dom';
-import Survey from './Survey';
+import { Link, Switch } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   icon: {
     marginRight: theme.spacing(2),
@@ -63,13 +59,13 @@ export default function Introduction() {
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <Router>
+                  <Switch>
                     <Link to="/survey">
                       <Button variant="contained" color="primary">
                         Take the survey
                       </Button>
                     </Link>
-                  </Router>
+                  </Switch>
                 </Grid>
                 <Grid item>
                   <Button variant="outlined" color="primary">

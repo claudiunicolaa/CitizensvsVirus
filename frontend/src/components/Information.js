@@ -6,6 +6,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
+import ReactPlayer from "react-player";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -48,33 +49,25 @@ export default function Information() {
               <MenuItem value={3}>
                 How is coronavirus affecting people who get it?
               </MenuItem>
-              <MenuItem value={4}>
-                How should I greet another person to avoid the risk of
-                infection?
-              </MenuItem>
-              <MenuItem value={5}>
-                How should I act if someone in my household is a COVID-19
-                patient?
-              </MenuItem>
-              <MenuItem value={6}>
-                How should I get ready for the period after quarantine?
-              </MenuItem>
-              <MenuItem value={7}>How can I help during the pandemic?</MenuItem>
-              <MenuItem value={8}>
-                How can I get help during the pandemic?
-              </MenuItem>
-              <MenuItem value={9}>What is myth and what is fact?</MenuItem>
               <MenuItem value={10}>Other, please specify:....</MenuItem>
             </Select>
-            {
-              selectFirstValue === 10 &&
+            {selectFirstValue === 10 && (
               <TextField
                 required
                 id="outlined-required"
                 defaultValue=""
                 variant="outlined"
               />
-            }
+            )}
+            {selectFirstValue === 1 && (
+              <ReactPlayer url="https://www.youtube.com/watch?v=bPITHEiFWLc" />
+            )}
+            {selectFirstValue === 2 && (
+              <ReactPlayer url="https://www.youtube.com/watch?v=6Ooz1GZsQ70" />
+            )}
+            {selectFirstValue === 3 && (
+              <ReactPlayer url="https://www.youtube.com/watch?v=qF42gZVm1Bo&" />
+            )}
           </FormControl>
         </Grid>
       </Grid>

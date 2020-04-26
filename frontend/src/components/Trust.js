@@ -45,7 +45,7 @@ export default function Trust() {
     setSelectFifthValue(event.target.value);
   };
   const handleSixthSelectChange = (event) => {
-    setSelectFifthValue(event.target.value);
+    setSelectSixthValue(event.target.value);
   };
   const handleFirstRadioChange = (event) => {
     setFirstRadioValue(event.target.value);

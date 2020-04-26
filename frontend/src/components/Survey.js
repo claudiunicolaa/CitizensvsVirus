@@ -12,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import MedicalServices from './MedicalServices';
 import Medication from './Medication';
 import Demographics from './Demographics';
+import Information from './Information';
 import Trust from './Trust';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import InputBase from '@material-ui/core/InputBase';
@@ -96,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const steps = ['Medical Services', 'Medication & Equipment', 'Trust', 'Demographics'];
+const steps = ['Medical Services', 'Medication & Equipment', 'Trust', 'Demographics', 'Information'];
 
 function getStepContent(step) {
   switch (step) {
@@ -108,6 +109,8 @@ function getStepContent(step) {
       return <Trust />;
     case 3:
       return <Demographics />;
+    case 4:
+        return <Information />;
     default:
       throw new Error('Unknown step');
   }

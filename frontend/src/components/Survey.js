@@ -11,8 +11,6 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import MedicalServices from './MedicalServices';
 import Medication from './Medication';
-import Information from './Information';
-import Equipment from './Equipment';
 import Demographics from './Demographics';
 import Trust from './Trust';
 import NativeSelect from '@material-ui/core/NativeSelect';

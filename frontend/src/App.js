@@ -7,6 +7,7 @@ import {
 
 import Introduction from './components/Introduction';
 import Survey from './components/Survey';
+import StatisticsIndex from "./components/Statistics/StatisticsIndex";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Switch>
           <Route path="/survey" component={Survey}/>
           <Route exact path="/" component={Introduction}/>
+          <Route path="/statistics" component={StatisticsIndex}/>
         </Switch>
       </div>
     </Router>
